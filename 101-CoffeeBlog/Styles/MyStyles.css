@@ -22,13 +22,18 @@ img{
     max-width: 100%;
 }
 
+a{
+    text-decoration: none;
+    color: white;
+}
+
 footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     background-color: black;
     color: white;
-    text-align: center;
     position: relative;
-    padding: 10px;
-    max-width: 100%;
     font-size: 30px;
 }
 
@@ -36,25 +41,22 @@ footer a{
     text-decoration: none;
     color: white;
     font-size: 20px;
-    margin-bottom: 20px;
     margin-right: 15px;
-    display: inline-block;
-}
-/*? Utilities */
-.container{
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
 }
 
-.btn-read-more{
+
+
+/*? Utilities */
+
+.title{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.btn{
     display: block;
-    background-color: black;
-    color: white;
     text-decoration: none;
     margin-bottom: 20px;
-    width: 120px;
     text-align: center;
     padding: 10px;
     text-transform: uppercase;
@@ -62,18 +64,16 @@ footer a{
     letter-spacing: 2px;
 }
 
+.btn-read-more{
+    background-color: black;
+    color: white;
+    width: 120px;
+}
+
 .btn-more-info{
-    display: block;
     background-color: saddlebrown;
     color: white;
-    text-decoration: none;
-    margin-bottom: 20px;
     width: 170px;
-    text-align: center;
-    padding: 15px;
-    text-transform: uppercase;
-    font-size: 12px;
-    letter-spacing: 2px;
 }
 
 /*? Header */
@@ -85,13 +85,82 @@ footer a{
     text-align: center;
 }
 
+.menu-bar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.menu a{
+    margin-right: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.blog-item{
+    border-bottom: 2px solid lightgrey;
+    margin-bottom: 30px;
+}
+
+.course-item{
+    border-bottom: 2px solid lightgrey;
+    margin-bottom: 30px;
+}
 
 /*? Main */
+.main-container{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.blog-container{
+    width: 70%;
+    margin-right: 20px;
+}
+
+.courses-container{
+    width: 30%
+}
+
 .courses h3, span{
     font-weight: bold;
     line-height: 3;
 }
 
+.courses h2{
+    text-align: left;
+    font-weight: bold;
+}
 
+/*? About */
+.main-about-container{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
 
-/*?  */
+}
+
+.about-container{
+    width: 50%;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.about-text{
+    width: 50%;
+    margin-right:20px ;
+}
+
+.about-item{
+    border-bottom: 2px solid lightgrey;
+    margin-bottom: 30px;
+}
+
+.about-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
