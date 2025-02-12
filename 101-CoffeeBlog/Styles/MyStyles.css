@@ -62,6 +62,7 @@ footer a{
     text-transform: uppercase;
     font-size: 12px;
     letter-spacing: 2px;
+    border: none;
 }
 
 .btn-read-more{
@@ -83,6 +84,12 @@ footer a{
     height: 350px;
     color: white;
     text-align: center;
+}
+
+.header-contact{
+    height: 120px;
+    background-color: black;
+    color: white;
 }
 
 .menu-bar{
@@ -155,12 +162,297 @@ footer a{
     margin-right:20px ;
 }
 
-.about-item{
-    border-bottom: 2px solid lightgrey;
-    margin-bottom: 30px;
-}
-
 .about-wrapper{
     display: flex;
     justify-content: space-between;
+}
+
+
+/*? contact */
+
+.container{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form{
+    background-color: white;
+    max-width: 100%;
+    width: 60%;
+    padding: 20px;
+    margin-top: -50px;
+    margin-bottom: 71px;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: -50px;
+    align-items: center;
+}
+
+label{
+    display: flex;
+    margin: 10px 0 5px 0;
+    font-weight: bold;
+    color: rgb(60, 59, 59);
+}
+
+input,textarea{
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+textarea{
+    height: 20px;
+    resize: none;
+}
+
+.contact-btn{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+}
+
+
+/*? Collage */
+.collage {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    max-width: 60%;
+    margin-inline: auto;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(8, 1fr);
+
+grid-template-areas:
+    "..   two two    two    three  four ..    .."
+    "one  two two    two    five   five six   .."
+    "..   two two    two    five   five seven eight"
+    "nine ten eleven eleven twelve ..   ..    .."
+    "..   ..  eleven eleven ..     ..   ..    ..";
+}
+
+.collage > div {
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.collage img {
+    width: 100%;
+    aspect-ratio: 1;
+    display: block;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+}
+
+.collage img:hover {
+    scale: 1.15;
+    rotate: 3deg;
+}
+
+.collage :nth-child(1) {
+    grid-area: one;
+}
+
+.collage :nth-child(2) {
+    grid-area: two;
+}
+
+.collage :nth-child(3) {
+    grid-area: three;
+}
+
+.collage :nth-child(4) {
+    grid-area: four;
+    background-color: rgb(81, 41, 41);
+    border-bottom-right-radius: 100%;
+}
+
+.collage :nth-child(5) {
+    grid-area: five;
+}
+
+.collage :nth-child(6) {
+    grid-area: six;
+    background-color: brown;
+    border-top-right-radius: 100%;
+}
+
+.collage :nth-child(7) {
+    grid-area: seven;
+}
+
+.collage :nth-child(8) {
+    grid-area: eight;
+    background-color: brown;
+    border-radius: 100%;
+}
+
+.collage :nth-child(9) {
+    grid-area: nine;
+    background-color: rgb(81, 41, 41);
+    border-top-left-radius: 100%;
+}
+
+.collage :nth-child(10) {
+    grid-area: ten;
+}
+
+.collage :nth-child(11) {
+    grid-area: eleven;
+}
+
+.collage :nth-child(12) {
+    grid-area: twelve;
+}
+
+/*? cards */
+.card-start {
+    max-width: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column  ;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    text-align: center;
+    padding: 10px;
+}
+
+.card-container{
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    margin-inline: 1.5rem;
+    padding-block: 5rem;
+}
+
+.product-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    justify-content: center;
+    margin-inline: 1.5rem;
+    row-gap: 3.5rem;
+    gap: 3rem;
+}
+
+.product-cards-2 {
+    margin-top: 45px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    justify-content: center;
+    margin-inline: 1.5rem;
+    row-gap: 3.5rem;
+    gap: 3rem;
+}
+
+.card-article{
+    position: relative;
+    overflow: hidden;
+}
+
+.card-article:hover .card-data{
+    animation: show-data 1s forwards;
+    opacity: 1;
+    transition: opacity .3s;
+}
+
+.card-article:hover{
+    animation: remove-overflow 2s forwards;
+}
+
+.card-article:not(:hover){
+    animation: show-overflow 2s forwards;
+}
+
+.card-article:not(:hover) .card-data{
+    animation: remove-data 1s forwards;
+}
+
+.card-img{
+    width: 400px;
+    height: 500px;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+
+
+
+@keyframes show-data {
+    50% {
+        transform: translateY(-18rem);
+    }
+    100% {
+        transform: translateY(-15rem);
+    }
+}
+
+@keyframes remove-overflow {
+    to {
+        overflow: initial;
+    }
+}
+
+@keyframes remove-data {
+    0% {
+        transform: translateY(-15rem);
+    }
+    50% {
+        transform: translateY(-18rem);
+    }
+    100% {
+        transform: translateY(.5rem);
+    }
+}
+
+@keyframes show-overflow{
+    0%{
+        overflow: initial;
+        pointer-events: none;
+    }
+    50%{
+        overflow: hidden;
+    }
+}
+
+.card-data {
+    text-align: center;
+    width: 300px;
+    background-color: white;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+    border-radius: 16px;
+    position: absolute;
+    bottom: -16rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    opacity: 0;
+    transition: opacity 1s 1s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-disc{
+    font-display: block;
+    font-size: 12px;
+    margin-bottom: .25rem;
+    color: grey;
+}
+
+.card-title{
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: .75rem;
 }
